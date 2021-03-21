@@ -38,14 +38,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Starry-Salon-for-Learning\static" />
+      <recent name="F:\Starry-Salon-for-Learning\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Starry-Salon-for-Learning" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -57,7 +68,25 @@
       <updated>1613913425373</updated>
       <workItem from="1613913427177" duration="4857000" />
       <workItem from="1613970307852" duration="7773000" />
-      <workItem from="1614064548440" duration="4558000" />
+      <workItem from="1614064548440" duration="6647000" />
+      <workItem from="1614150207309" duration="5199000" />
+      <workItem from="1614165818766" duration="1979000" />
+      <workItem from="1614248678275" duration="15539000" />
+      <workItem from="1614318404478" duration="1218000" />
+      <workItem from="1614412830318" duration="7257000" />
+      <workItem from="1614504578369" duration="1779000" />
+      <workItem from="1614563075232" duration="666000" />
+      <workItem from="1614587470339" duration="142000" />
+      <workItem from="1614587632800" duration="609000" />
+      <workItem from="1614588266475" duration="6404000" />
+      <workItem from="1614677406532" duration="302000" />
+      <workItem from="1614677844782" duration="3598000" />
+      <workItem from="1614682371658" duration="2471000" />
+      <workItem from="1614860111072" duration="4234000" />
+      <workItem from="1615282418300" duration="23000" />
+      <workItem from="1615722278898" duration="312000" />
+      <workItem from="1616314054549" duration="49000" />
+      <workItem from="1616314131805" duration="9943000" />
     </task>
     <servers />
   </component>

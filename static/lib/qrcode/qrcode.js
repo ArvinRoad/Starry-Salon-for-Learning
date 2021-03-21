@@ -274,7 +274,7 @@ var QRCode;
 		return Drawing;
 	})() : (function () { // Drawing in Canvas
 		function _onMakeImage() {
-			this._elImage.src = this._elCanvas.toDataURL("image/png");
+			this._elImage.src = this._elCanvas.toDataURL("images/png");
 			this._elImage.style.display = "block";
 			this._elCanvas.style.display = "none";			
 		}
@@ -333,7 +333,7 @@ var QRCode;
                 el.onabort = fOnError;
                 el.onerror = fOnError;
                 el.onload = fOnSuccess;
-                el.src = "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="; // the Image contains 1px data.
+                el.src = "data:images/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="; // the Image contains 1px data.
                 return;
             } else if (self._bSupportDataURI === true && self._fSuccess) {
                 self._fSuccess.call(self);
@@ -418,7 +418,7 @@ var QRCode;
 		};
 			
 		/**
-		 * Make the image from Canvas if the browser supports Data URI.
+		 * Make the images from Canvas if the browser supports Data URI.
 		 */
 		Drawing.prototype.makeImage = function () {
 			if (this._bIsPainted) {

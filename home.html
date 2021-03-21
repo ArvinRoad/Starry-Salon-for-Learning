@@ -1,77 +1,286 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-    <header>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title th:text="#{index.title}">Starry Salon for Learning</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-        <link rel="stylesheet" href="../static/css/mc.css">
-        <link rel="icon" href="../static/ico/logo.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="../static/ico/logo.ico" type="image/x-icon">
-    </header>
-    <body>
-        <!--导航栏-->
-        <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
-            <div class="ui container">
-                <div class="ui inverted secondary stackable menu">
-                    <h2 class="ui header item" th:text="#{index.title}"><i class="globe icon"></i>Starry Salon for Learning</h2>
-                    <!--主页-->
-                    <div class="ui simple dropdown item m-mobile-hide" th:text="#{index.home}"><i class="home icon"></i>Home<i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.category}"><i class="idea icon"></i>Category</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.tags}"><i class="tags icon"></i>Tags</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.archive}"><i class="clone icon"></i>Archive</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.publish}"><i class="edit outline icon"></i>Publish</a>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title th:text="#{index.title}">Starry Salon for Learning</title>
+    <meta name="Keywords" content="星空学习网,Starry Salon for Learning,Arvin,Think&CreateTechnologyStudio,创想科技,TCT"/>
+    <meta name="Description" content="星空学习网，每个人如星星一般散发着自己的光芒，尽管提供的知识很少但星星之火可以燎原。彼此交相辉映，照亮知识的殿堂..."/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <link rel="icon" href="./static/ico/logo.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./static/ico/logo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="./static/css/mc.css"/>
+    <style>
+        .back-to-top {
+            background-image: url("https://cdn.jsdelivr.net/gh/cetr/cdn@master/blog/img/space-to-top.png");
+            width: 62px;
+            height: 88px;
+        }
+
+        .back-to-top:hover {
+            animation: to-top-fly .4s steps(1) infinite;
+        }
+
+        @keyframes to-top-fly {
+            0% {
+                background-position-x: -142.5px;
+            }
+
+            16.5% {
+                background-position-x: -284.5px;
+            }
+
+            33% {
+                background-position-x: -429.5px;
+            }
+
+            49.5% {
+                background-position-x: -570.5px;
+            }
+
+            66% {
+                background-position-x: -714.5px;
+            }
+
+            82.5% {
+                background-position-x: -856.5px;
+            }
+
+            100% {
+                background-position-x: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui header item" th:text="#{index.title}"><i class="globe icon"></i>Starry Salon for Learning</h2>
+            <!--主页-->
+            <div class="ui simple dropdown item m-mobile-hide" th:text="#{index.home}"><i class="home icon"></i>Home<i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.category}"><i class="idea icon"></i>Category</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.tags}"><i class="tags icon"></i>Tags</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.archive}"><i class="clone icon"></i>Archive</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.publish}"><i class="edit outline icon"></i>Publish</a>
+                </div>
+            </div>
+            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.photos}"><i class="images icon"></i>Photos</a>
+            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.music}"><i class="music icon"></i>Music</a>
+            <!--实验室-->
+            <div class="ui simple dropdown item m-mobile-hide" th:text="#{index.laboratory}"><i class="university icon"></i>Laboratory<i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.chemistryzone}"><i class="flask icon"></i>Chemistry Zone</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.physicszone}"><i class="cogs icon"></i>Physics Zone</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.scientificzone}"><i class="space shuttle icon"></i>Scientific Zone</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.programmaticzone}"><i class="code icon"></i>Programmatic Zone</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.medicalarea}"><i class="hospital outline icon"></i>Medical Area</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.literaryzone}"><i class="accessible icon"></i>Literary Zone</a>
+                </div>
+            </div>
+            <!--用户-->
+            <div class="ui simple dropdown item m-mobile-hide">
+                <img src="https://picsum.photos/id/1027/100/100" alt="头像" class="ui avatar image">Guest Island<i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.me}"><i class="user icon"></i>Me</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.personalcertificates}"><i class="certificate icon"></i>Personal Certificates</a>
+                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.logoff}"><i class="sign-out icon"></i>Logoff</a>
+                </div>
+            </div>
+            <!--搜索-->
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!--中间内容-->
+
+<div class="m-container m-padded-tb-big animated fadeIn">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <!--左边内容-->
+            <div class="eleven wide column">
+                <!--header-->
+                <div class="ui top attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h3 class="ui header" th:text="#{index.article}">Article</h3>
                         </div>
-                    </div>
-                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.photos}"><i class="images icon"></i>Photos</a>
-                    <a href="#" class="m-item item m-mobile-hide" th:text="#{index.music}"><i class="music icon"></i>Music</a>
-                    <!--实验室-->
-                    <div class="ui simple dropdown item m-mobile-hide" th:text="#{index.laboratory}"><i class="university icon"></i>Laboratory<i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a href="#" class="m-item item m-mobile-hide" th:text="index.chemistryzone"><i class="flask icon"></i>Chemistry Zone</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="index.physicszone"><i class="cogs icon"></i>Physics Zone</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="index.scientificzone"><i class="space shuttle icon"></i>Scientific Zone</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="index.programmaticzone"><i class="code icon"></i>Programmatic Zone</a>
-                        </div>
-                    </div>
-                    <!--用户-->
-                    <div class="ui simple dropdown item m-mobile-hide">
-                        <img src="https://picsum.photos/id/1027/100/100" alt="头像" class="ui avatar image">
-                        Guest Island
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.me}"><i class="info icon"></i>Me</a>
-                            <a href="#" class="m-item item m-mobile-hide" th:text="#{index.logoff}"><i class="sign-out icon"></i>Logoff</a>
-                        </div>
-                    </div>
-                    <!--搜索栏-->
-                    <div class="right m-item item m-mobile-hide">
-                        <div class="ui icon inverted transparent input">
-                            <input type="text" placeholder="Search....">
-                            <i class="search link icon"></i>
+                        <div class="right aligned column">
+                            <i th:text="#{index.total}">total</i>
+                            <h2 class="ui orange header m-inline-block m-text-thin">11</h2>
+                            <i th:text="#{index.essay}">article</i>
                         </div>
                     </div>
                 </div>
 
+                <!--footer-->
+                <div class="ui bottom attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <a href="#" class="ui mini basic button" th:text="#{index.previouspage}">Previous Page</a>
+                        </div>
+                        <div class="right aligned column">
+                            <a href="#" class="ui mini basic button" th:text="#{index.nextpage}">Next Page</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <!--中间内容--->
+            <!--右边内容-->
+            <div class="five wide column"></div>
+        </div>
+    </div>
+</div>
+<!--返回小火箭-->
+<div class="back-to-top"></div>
+<footer class="ui inverted vertical segment m-padded-tb-massivs">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
 
+        </div>
+    </div>
+</footer>
 
-        <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
-            <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-        <!--/*/</th:block>/*/-->
-        <script>
-            $('.menu.toggle').click(function () {
-                $('.m-item').toggleClass('m-mobile-hide');
-            });
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 
-            $('.ui.dropdown').dropdown();
-            $('.ui.dropdown').dropdown({
-                on : 'hover'
-            });
-        </script>
-    </body>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("4/10/2021 00:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本网站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",500);
+</script>
+
+<!--播放器-->
+<script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+
+<!--看板娘-->
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+<!--引入资源-->
+<script src="/lib/prism/prism.js"></script>
+<script src="/lib/tocbot/tocbot.min.js"></script>
+<script src="/lib/qrcode/qrcode.min.js"></script>
+<script src="/lib/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="/lib/waypoint/jquery.waypoints.min.js"></script>
+<script src="/lib/picture/js/jkresponsivegallery.js"></script>
+
+<!--    表情包js-->
+<script src="/js/jquery.emoji.js"></script>
+<script src="/js/emoji.list.js"></script>
+<script>
+    $('#newblog-container').load(/*/footer/newblog*/"/footer/newblog");
+</script>
+
+<!--适配移动端和电脑端-->
+<script type="text/javascript">
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {     //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应用程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    if (browser.versions.mobile) {
+        //执行移动端的相关代码
+        alert("移动端");
+        //设置移动端不显示网易云音乐插件
+          onload = function () {
+              var MusicDivShow = document.getElementById('netEasy-music');//获取指定div中的元素
+              MusicDivShow.style.display = 'none';//控制层隐藏
+          };
+    }else if(!browser.versions.mobile){ //非移动端，动态加载js和div
+        //设置电脑端显示网易云音乐插件
+        onload = function () {
+            var MusicDivShow = document.getElementById('netEasy-music');//获取指定div中的元素
+            MusicDivShow.style.display = 'block';//控制层显示
+        };
+        var script1 = document.createElement('script');
+        script1.type = 'text/javascript';
+        script1.src = '\\js\\snow.js';
+
+        <!-- 天气预报 -->
+        WIDGET = {FID: 'EtgqPWMbdv'}
+        var script4 = document.createElement('script');
+        script4.type = 'text/javascript';
+        script4.src = 'https://apip.weatherdt.com/float/static/js/r.js?v=1111';
+
+        var script2 = document.createElement('script');
+        script2.type = 'text/javascript';
+        script2.src = '\\js\\click_show_text.js';
+
+        var script3 = document.createElement('script');
+        script3.type = 'text/javascript';
+        script3.color = '220,220,220';
+        script3.opacity = '0.7';//透明度
+        script3.zIndex = '-2';
+        script3.count = '200';
+        script3.src = '//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js';
+
+        /*live-2D*/
+        var script5 = document.createElement('script');
+        script5.type = 'text/javascript';
+        script5.src = '\\js\\autoload.js';
+
+        $('body').append(script5);
+        $('body').append(script1);``
+        $('body').append(script4);
+        $('body').append(script2);
+        $('body').append(script3);
+    }
+</script>
+
+<script data-pjax>
+    $(function () {
+        coor.affix('.affix_div');
+        coor.nightMode();
+        coor.aplayerAlone();
+        coor.createTarget_for_post_a();
+        coor.complete_ui();
+        coor.verifyPasswordForm();
+        coor.likes_journal();
+        coor.photos_waterFall('https://cdn.jsdelivr.net/gh/cetr/cdn@master/blog/img/loading-2.gif');
+        coor.zoomImage('https://cdn.jsdelivr.net/gh/cetr/cdn@master/blog/img/loading-3.svg');
+        coor.lazyload('img.lazy.lazyImg', 'https://cdn.jsdelivr.net/gh/cetr/cdn@master/blog/img/loading-1.svg');
+    });
+</script>
+
+<script>
+    $('.ui.dropdown').dropdown();
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+</script>
+</body>
 </html>
